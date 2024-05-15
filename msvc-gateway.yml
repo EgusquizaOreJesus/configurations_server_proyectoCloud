@@ -28,8 +28,8 @@ spring:
 
 # Configuración de Eureka
 eureka:
+  instance:
+    hostname: 54.90.34.44
   client:
     serviceUrl:
-      defaultZone: http://52.87.251.253:8761/eureka
-    fetch-registry: true
-    register-with-eureka: true
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
