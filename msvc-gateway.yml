@@ -15,18 +15,18 @@ spring:
       mvc:
         routes:    # rutas a las que se puede acceder
           - id: usuarios
-            uri: http://54.242.109.22:9092
+            uri: http://52.87.251.253:9092
             predicates:
               - Path=/api/usuarios/**
           - id: respuesta
-            uri: http://54.242.109.22:9091
+            uri: http://52.87.251.253:9091
             predicates:
               - Path=/api/respuestas/**
           - id: hilos
-            uri: http://54.242.109.22:9090
+            uri: http://52.87.251.253:9090
             predicates:
               - Path=/api/hilos/**
           - id: estados
-            uri: http://54.242.109.22:9093
+            uri: http://52.87.251.253:9093
             predicates:
               - Path=/api/estados/**
