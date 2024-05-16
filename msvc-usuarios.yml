@@ -23,9 +23,10 @@ spring:
       max-file-size: 10MB
       max-request-size: 10MB
 
+# Configuración de Eureka
 eureka:
   instance:
-    hostname: 54.90.34.44
+    hostname: 100.28.129.190
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
