@@ -2,6 +2,10 @@ server:
   port: 9094
 
 # Configuración de Eureka
+
+spring:
+  application:
+    name: msvc-capadeseguridad
 eureka:
   instance:
     hostname: localhost
