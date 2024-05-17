@@ -3,7 +3,7 @@ server:
   port: 8080
 
 my_ip:
-  value: 34.224.1.226
+  value: localhost
 
 
 spring:
@@ -14,19 +14,19 @@ spring:
       mvc:
         routes:
           - id: usuarios
-            uri: http://${my_ip.value}:9092
+            uri: lb://msvc-usuarios
             predicates:
               - Path=/api/usuarios/**
           - id: respuesta
-            uri: http://${my_ip.value}:9091
+            uri: lb://msvc-respuestas
             predicates:
               - Path=/api/respuestas/**
           - id: hilos
-            uri: http://${my_ip.value}:9090
+            uri: lb://msvc-hilos
             predicates:
               - Path=/api/hilos/**
           - id: estados
-            uri: http://${my_ip.value}:9093
+            uri: lb://msvc-estados
             predicates:
               - Path=/api/estados/**
 
