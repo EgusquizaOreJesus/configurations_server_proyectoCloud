@@ -16,9 +16,7 @@ spring:
           - id: usuarios
             uri: lb://msvc-usuarios
             predicates:
-              - Path=/api/signup/**
-              - Path=/api/signin/**
-              - Path=/usuarios/**
+              - Path=/api/usuarios/**
           - id: respuesta
             uri: lb://msvc-respuestas
             predicates:
