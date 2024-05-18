@@ -14,19 +14,19 @@ spring:
       mvc:
         routes:
           - id: usuarios
-            uri: lb://msvc-usuarios
+            uri: http://${my_ip.value}:9092
             predicates:
               - Path=/api/usuarios/**
           - id: respuesta
-            uri: lb://msvc-respuestas
+            uri:  http://${my_ip.value}:9091
             predicates:
               - Path=/api/respuestas/**
           - id: hilos
-            uri: lb://msvc-hilos
+            uri:  http://${my_ip.value}:9090
             predicates:
               - Path=/api/hilos/**
           - id: estados
-            uri: lb://msvc-estados
+            uri:  http://${my_ip.value}:9093
             predicates:
               - Path=/api/estados/**
 
