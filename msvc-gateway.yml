@@ -3,9 +3,10 @@ server:
   port: 8080
 
 my_ip:
-  value: 100.28.80.43
+  value: localhost
 
-
+# 100.28.80.43
+# 52.44.23.198
 spring:
   application:
     name: msvc-gateway
@@ -33,7 +34,7 @@ spring:
 # Configuración de Eureka
 eureka:
   instance:
-    hostname: 52.44.23.198
+    hostname: localhost
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
